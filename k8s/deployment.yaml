@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: guestfish/innervate-demo:latest
+          image: guestfish/innervate-demo:demo
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -36,5 +37,5 @@ spec:
               memory: "32Mi"
               cpu: "20m"
             limits:
-              memory: "64Mi"
-              cpu: "50m"
+              memory: "96Mi"
+              cpu: "40m"
